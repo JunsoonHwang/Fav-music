@@ -1,27 +1,167 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fav Music</title>
 
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fav Music" />
+  <meta property="og:title" content="Fav Music KR" />
+  <meta property="og:description" content="나만 알기 아까운 아티스트를 추천해주세요!" />
+  <meta property="og:image" content="./music_note.png" />
+  <meta property="og:url" content="http://127.0.0.1:5500/index.html" />
+
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:site" content="Fav Music" />
+  <meta property="twitter:title" content="Fav Music KR" />
+  <meta property="twitter:description" content="나만 알기 아까운 아티스트를 추천해주세요!" />
+  <meta property="twitter:image" content="./music_note.png" />
+  <meta property="twitter:url" content="http://127.0.0.1:5500/index.html" />
+
   <link rel="icon" href="./Favicon.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <link rel="stylesheet" href="./css/main.css">
+
+  <!-- lodash cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script defer src="./js/main.js"></script>
 </head>
 <body>
 
   <!-- HEADER -->
+
   <header>
     <div class="inner">
+
       <a href="/" class="logo">
-        <!-- / = 절대경로 -->
-        <img src="./music_note.png" alt="no">
+        <img src="./music_note.png" alt="music_note">
       </a>
+
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="/signin">회원가입</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">My Fav Music</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">공지사항</a>
+          </li>
+        </ul>
+        <div class="search">
+          <input type="text" />
+          <div class="material-icons">search</div>
+        </div>
+      </div>
+
+      <ul class="main-menu">
+        <li class="item">
+          <div class="item__name">사이트 소개</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">인생 Playlist</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>내가 만드는 순위</h4>
+                  <ul>
+                    <li>탑10</li>
+                    <li>플레이 리스트 공유</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>인생 아티스트</h4>
+                  <ul>
+                    <li></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">나만 알고싶은 노래</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>장르</h4>
+                  <ul>
+                    <li>EDM</li>
+                    <li>발라드</li>
+                    <li>시티팝</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>아티스트</h4>
+                  <ul>
+                    <li></li>
+                    <li>트와이스</li>
+                    <li>dpr live</li>
+                    <li>post malon</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나만 몰랐던 노래 찾기</h4>
+                <p>Fav Music으로 숨어있던 명곡을 찾아보세요.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">코드 정보</div>
+          <div class="item__contents">
+            <div class="contents__menu"></div>
+            <div class="contents__texture"></div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">내 기분에 맞는 음악</div>
+          <div class="item__contents">
+            <div class="contents__menu"></div>
+            <div class="contents__texture"></div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="badges">
+      <div class="badge">
+        <img src="./images/badge1.jpg" alt="Badge" />
+      </div>
+      <div class="badge">
+        <img src="./images/badge2.jpg" alt="Badge" />
+      </div>
     </div>
   </header>
-  
 </body>
+
 </html>
