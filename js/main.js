@@ -21,7 +21,6 @@ searchInputEl.addEventListener('blur', function () {
   // add >> remove 변경
   searchInputEl.setAttribute('placeholder', '');
 })
-
 const badgeEl = document.querySelector('header .badges')
 
 window.addEventListener('scroll', _.throttle(function() {
@@ -31,10 +30,17 @@ window.addEventListener('scroll', _.throttle(function() {
   if (window.scrollY > 500) { 
     // 배지 숨기기 
     // 화면이 스크롤 될때마다 윈도우에 스크롤Y라는 스크롤값 값이 갱신됌
-    badgeEl.style.display = 'none';
+    // gsap.to(요소, 지속시간(s), 옵션({}))
+    gsap.to(badgeEl, .6, {
+      opacity: 0,
+      display: 'none'
+    })
   } else {
     // 배지 보이기
-    badgeEl.style.display = 'block';
+    gsap.to(badgeEl, .6, {
+      opacity: 1,
+      display: 'block'
+    })
   }
 }, 300)); // lodash 라는 자바스크립트 라이브러리 메소드
 // 300밀리세컨드 = 0.3초
