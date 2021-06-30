@@ -45,3 +45,15 @@ window.addEventListener('scroll', _.throttle(function() {
 }, 300)); // lodash 라는 자바스크립트 라이브러리 메소드
 // 300밀리세컨드 = 0.3초
 // _.throttle(함수, 시간)
+
+
+const fadeEls = document.querySelectorAll('.visual .fade-in')
+fadeEls.forEach(function (fadeEl, index) {
+  // fade-in 이라는 요소들의 갯수만큼 forEach 내부의 함수가 반복이 됌
+  // index 0부터 시작하는 제로베이스드 넘버링
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7,
+    // gsap에서 제공하는 지연시키는 기능
+    opacity: 1
+  });
+})
