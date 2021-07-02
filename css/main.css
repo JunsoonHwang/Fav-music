@@ -350,13 +350,20 @@ header .badges .badge {
   margin-right: 20px;
 }
 .notice .notice-line .inner__left .swiper-container {
-  background-color: orange;
   /* 가로너비가 없고 display: flex라서 가로너비가 최대한 줄어드려
   하기 때문에 안보이는 것
   대신 높이값은 최대한 늘어나려함 */
   flex-grow: 1;
   /* 최대한 늘어나라 */
   height: 62px;
+}
+.notice .notice-line .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
 }
 .notice .notice-line .inner__left .notice-line__more {
   width: 62px;
