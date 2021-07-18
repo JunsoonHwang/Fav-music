@@ -22,6 +22,7 @@ searchInputEl.addEventListener('blur', function () {
   searchInputEl.setAttribute('placeholder', '');
 })
 const badgeEl = document.querySelector('header .badges')
+const toTopEl =document.querySelector('#to-top')
 
 window.addEventListener('scroll', _.throttle(function() {
   //window = 브라우저 창을 의미, 스크롤 시 익명의 함수 실행
@@ -35,17 +36,28 @@ window.addEventListener('scroll', _.throttle(function() {
       opacity: 0,
       display: 'none'
     })
+    gsap.to(toTopEl, .2, {
+      x: 0
+    })
   } else {
     // 배지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     })
+    gsap.to(toTopEl, .2, {
+      x: 100
+    })
   }
 }, 300)); // lodash 라는 자바스크립트 라이브러리 메소드
 // 300밀리세컨드 = 0.3초
 // _.throttle(함수, 시간)
 
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
 
 const fadeEls = document.querySelectorAll('.visual .fade-in')
 fadeEls.forEach(function (fadeEl, index) {
@@ -145,3 +157,8 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller())
 })
+
+const thisYear = document.querySelector('.this-year')
+thisYear.textContent = new Date().getFullYear()
+// textContent = 글자의 값을 알아내거나 지정함
+// new Date().getFullYear() = 현재 년도 정보를 숫자 데이터로 반환

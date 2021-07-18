@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 6000px;
 }
 img {
   display: block;
@@ -844,8 +843,78 @@ footer .menu {
   justify-content: center;
 }
 footer .menu li {
-
+  position: relative;
+}
+footer .menu li::before {
+  content: "";
+  background-color: #555;
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  top: 0;
+  bottom: 0;
+  right: -1px;
+  margin: auto;
+}
+footer .menu li:last-child::before {
+  display: none;
 }
 footer .menu li a {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 700;
+  display: block;
+  padding: 15px;
+}
+footer .menu li a.green {
+  color: #669900;
+}
+footer .btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+footer .btn-group .btn {
+  font-size: 12px;
+  margin-right: 10px;
+}
+footer .btn-group .btn:last-child {
+  margin-right: 0;
+}
+footer .info {
+  margin-top: 30px;
+  text-align: center;
+}
+footer .info span {
+  color: #999;
+  font-size: 12px;
+  margin-right: 20px;
+}
+footer .info span:last-child {
+  margin-right: 0;
+}
+footer .copylight {
+  margin-top: 12px;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+footer .logo {
+  margin: 30px auto 0;
+}
 
+#to-top {
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
